@@ -1,22 +1,22 @@
 [
   {
     "title": "Spatial Sound Mini-Experiment",
-    "image": "/images/sound.png",
+    "image": "images/sound.png",
     "description": "A small exploration of how stereo cues can create a sense of space."
   },
   {
     "title": "Podcast: Meditation Mysteries",
-    "image": "/images/sound.png",
+    "image": "images/sound.png",
     "description": "A short podcast pilot episode."
   },
   {
     "title": "Videography Highlight Reel",
-    "image": "/images/sound.png",
+    "image": "images/sound.png",
     "description": "A reel of short videos."
   },
   {
     "title": "Writing Portfolio Sampler",
-    "image": "/images/sound.png",
+    "image": "images/sound.png",
     "description": "Short and longform pieces over the years."
   }
 ]

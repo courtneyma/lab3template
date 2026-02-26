@@ -112,7 +112,37 @@ section {
   border-bottom: 1px solid oklch(90% 3% 200);
 }
 
+
+.home-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+  align-items: start;
+}
+
+.home-aside {
+  background: oklch(85% 3% 200);
+  padding: 1.5em;
+}
+
 .reading {
   display: grid;
   gap: 1em;
+}
+
+.reading-item {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.reading-item img {
+  width: 80px;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
 }

@@ -2,16 +2,16 @@
   {
     "title": "The Paper Menagerie and Other Short Stories",
     "author": "Ken Liu",
-    "image": "/images/papertiger.png"
+    "image": "images/papertiger.png"
   },
   {
     "title": "Stories of your Life and Others",
     "author": "Ted Chiang",
-    "image": "/images/yourlifeandothers.png"
+    "image": "images/yourlifeandothers.png"
   },
   {
     "title": "Computing Taste: Algorithms and the Makers of Music Recommendation",
     "author": "Nick Seaver",
-    "image": "/images/computingtaste.png"
+    "image": "images/computingtaste.png"
   }
 ]
