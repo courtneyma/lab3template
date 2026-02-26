@@ -111,3 +111,8 @@ section {
   padding-block: 0.5em;
   border-bottom: 1px solid oklch(90% 3% 200);
 }
+
+.reading {
+  display: grid;
+  gap: 1em;
+}
