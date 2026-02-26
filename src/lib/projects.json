@@ -1,22 +1,22 @@
 [
   {
     "title": "Spatial Sound Mini-Experiment",
-    "image": "/images/rudiesbaby.JPG",
+    "image": "/images/sound.png",
     "description": "A small exploration of how stereo cues can create a sense of space."
   },
   {
-    "title": "Podcast Pilot Edit",
-    "image": "/images/rudiesbaby.JPG",
-    "description": "A short podcast pilot with interview clips, music, and pacing edits."
+    "title": "Podcast: Meditation Mysteries",
+    "image": "/images/sound.png",
+    "description": "A short podcast pilot episode."
   },
   {
     "title": "Videography Highlight Reel",
-    "image": "/images/rudiesbaby.JPG",
-    "description": "A reel of short campus videos focused on framing and story."
+    "image": "/images/sound.png",
+    "description": "A reel of short videos."
   },
   {
     "title": "Writing Portfolio Sampler",
-    "image": "/images/rudiesbaby.JPG",
-    "description": "Short pieces that blend personal narrative with research."
+    "image": "/images/sound.png",
+    "description": "Short and longform pieces over the years."
   }
 ]
