@@ -6,13 +6,6 @@
   import ReadingItem from "$lib/ReadingItem.svelte";
 </script>
 
-<nav>
-  <a class="current" href=".">Home</a>
-  <a href="projects">Projects</a>
-  <a href="contact">Contact</a>
-  <a href="resume">Resume</a>
-  <a href="https://github.com/courtneyma" target="_blank">GitHub</a>
-</nav>
 
 <h1>Courtney</h1>
 
