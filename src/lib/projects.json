@@ -1,22 +1,65 @@
 [
   {
-    "title": "Spatial Sound Mini-Experiment",
-    "image": "images/sound.png",
-    "description": "A small exploration of how stereo cues can create a sense of space."
+    "title": "Buying Chickens",
+    "year": 2026,
+    "image": "images/chickens.png",
+    "description": "Buying chickens from John the farmer.",
+    "story": "I drove a pickup truck and bought 12 white chickens from John and paid in fresh cow milk and cash."
   },
   {
-    "title": "Podcast: Meditation Mysteries",
-    "image": "images/sound.png",
-    "description": "A short podcast pilot episode."
+    "title": "Separating Baby Goats",
+    "year": 2026,
+    "image": "images/babygoat.png",
+    "description": "Separated baby goats(approx 10) each night.",
+    "story": "We had to catch and separate the baby goats at night so that we could milk their moms in the morning."
   },
   {
-    "title": "Videography Highlight Reel",
-    "image": "images/sound.png",
-    "description": "A reel of short videos."
+    "title": "Milking Cows",
+    "year": 2026,
+    "image": "images/cows.png",
+    "description": "Milked cows every morning.",
+    "story": "We milked the cows every morning with a small machine and then strained and chilled the milk."
   },
   {
-    "title": "Writing Portfolio Sampler",
-    "image": "images/sound.png",
-    "description": "Short and longform pieces over the years."
+    "title": "Collected Eggs",
+    "year": 2026,
+    "image": "images/eggs.png",
+    "description": "Every day before noon we would collect and count the chicken eggs.",
+    "story": "I would collect all the chicken eggs in the morning and separate the easter eggs(the turqioseish eggs) so that we could incubate them."
+  },
+  {
+    "title": "Separating Lambs",
+    "year": 2026,
+    "image": "images/lambs.png",
+    "description": "We separated the lambs every morning.",
+    "story": "I used to have to chase and catch the lambs every morning, but after two weeks I had socialized them enough to the point where they would come running to me every morning."
+  },
+  {
+    "title": "Black Soldier Flies",
+    "year": 2026,
+    "image": "images/bsf.png",
+    "description": "Took care of black soldier fly larvae.",
+    "story": "I would take care of the black soldier fly larvae which are a great source of nutrients for chickens but also compost and are great for sustainable farming."
+  },
+  {
+    "title": "Emma the Cat",
+    "year": 2026,
+    "image": "images/emma.png",
+    "description": "Petting Emma our favorite cat.",
+    "story": "Every day I would pet Emma because she was the cutest cat there."
+  },
+  {
+    "title": "Chicken Coop",
+    "year": 2026,
+    "image": "images/coop.png",
+    "description": "Cleaning and composting the chicken coop.",
+    "story": "I had to turn and fluff and add new organic material to the chicken coop almost everyday to keep it clean and fresh"
+  },
+  {
+    "title": "Cheese",
+    "year": 2026,
+    "image": "images/cheese.png",
+    "description": "Making cheese.",
+    "story": "Sometimes we made cheese with the milk from the farm and it tasted great but there was a lot of washing to do after."
   }
 ]

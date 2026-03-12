@@ -121,3 +121,21 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+.github-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75em;
+  margin: 0;
+}
+
+.github-stats dt {
+  grid-row: 1;
+  font-weight: 600;
+}
+
+.github-stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.5rem;
+}

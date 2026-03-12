@@ -4,6 +4,22 @@
 
   import reading from "$lib/reading.json";
   import ReadingItem from "$lib/ReadingItem.svelte";
+
+  import { onMount } from "svelte";
+
+  let githubData = null;
+  let loading = true;
+  let error = null;
+
+  onMount(async () => {
+    try {
+      let response = await fetch("https://api.github.com/users/courtneyma");
+      githubData = await response.json();
+    } catch (err) {
+      error = err;
+    }
+    loading = false;
+  });
 </script>
 
 
@@ -38,6 +54,29 @@
     </div>
   </aside>
 </div>
+
+{#if loading}
+  <p>Loading...</p>
+{:else if error}
+  <p>Something went wrong: {error.message}</p>
+{:else}
+  <section class="github-stats">
+    <h2>My GitHub Stats</h2>
+    <dl>
+      <dt>Followers</dt>
+      <dd>{githubData.followers}</dd>
+
+      <dt>Following</dt>
+      <dd>{githubData.following}</dd>
+
+      <dt>Public Repos</dt>
+      <dd>{githubData.public_repos}</dd>
+
+      <dt>Public Gists</dt>
+      <dd>{githubData.public_gists}</dd>
+    </dl>
+  </section>
+{/if}
 
 <h2>Latest projects</h2>
 
