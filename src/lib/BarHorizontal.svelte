@@ -2,17 +2,18 @@
   import * as d3 from "d3";
 
   export let data = [];
+  export let title = "";
 
-  let width = 560;
-  let height = 320;
+  let width = 720;
+  let height = 260;
 
-  let margin = { top: 40, right: 150, bottom: 60, left: 90 };
+  let margin = { top: 35, right: 110, bottom: 55, left: 90 };
   $: innerWidth = width - margin.left - margin.right;
   $: innerHeight = height - margin.top - margin.bottom;
 
   $: xMax = d3.max(data, (d) => d.value) || 1;
 
-  $: xScale = d3.scaleLinear().domain([0, xMax]).range([0, innerWidth]);
+  $: xScale = d3.scaleLinear().domain([0, xMax]).range([0, innerWidth]).nice();
 
   $: yScale = d3
     .scaleBand()
@@ -25,7 +26,12 @@
   let xAxis, yAxis;
 
   $: if (xAxis && yAxis) {
-    d3.select(xAxis).call(d3.axisBottom(xScale));
+    d3.select(xAxis).call(
+      d3
+        .axisBottom(xScale)
+        .ticks(Math.min(10, xMax))
+        .tickFormat((d) => (Number.isInteger(d) ? d : ""))
+    );
     d3.select(yAxis).call(d3.axisLeft(yScale));
   }
 
@@ -40,10 +46,9 @@
       text-anchor="middle"
       class="chart-title"
     >
-      Lines of Code by Language
+      {title}
     </text>
 
-    <!-- axes -->
     <g transform="translate({margin.left}, {margin.top + innerHeight})" bind:this={xAxis} />
     <g transform="translate({margin.left}, {margin.top})" bind:this={yAxis} />
 
@@ -58,7 +63,6 @@
         />
       {/each}
 
-      <!-- axis labels -->
       <text x={innerWidth / 2} y={innerHeight + margin.bottom + 10} text-anchor="middle" class="axis-label">
         Lines of Code
       </text>
@@ -73,31 +77,12 @@
         Language
       </text>
 
-      <!-- annotation -->
       {#if maxBar}
-        <rect
-          x={0}
-          y={yScale(maxBar.label)}
-          width={xScale(maxBar.value)}
-          height={yScale.bandwidth()}
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-        <line
-          x1={xScale(maxBar.value)}
-          y1={yScale(maxBar.label) + yScale.bandwidth() / 2}
-          x2={xScale(maxBar.value) + 30}
-          y2={yScale(maxBar.label) + yScale.bandwidth() / 2}
-          stroke="currentColor"
-          stroke-width="1"
-        />
-
         <text
-          x={xScale(maxBar.value) + 35}
+          x={Math.min(innerWidth - 5, xScale(maxBar.value) + 8)}
           y={yScale(maxBar.label) + yScale.bandwidth() / 2}
           dominant-baseline="middle"
+          text-anchor="start"
           class="annotation"
         >
           Most lines
@@ -135,13 +120,14 @@
     margin: 0;
     flex: 1;
     display: grid;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .legend li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 0.9em;
   }
 
   .swatch {
@@ -152,13 +138,13 @@
   }
 
   .chart-title {
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 0.95em;
+    font-weight: 700;
     fill: currentColor;
   }
 
   .axis-label {
-    font-size: 0.8em;
+    font-size: 0.75em;
     fill: currentColor;
   }
 
